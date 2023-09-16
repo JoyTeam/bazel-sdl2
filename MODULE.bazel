@@ -1,6 +1,6 @@
 """SDL2 rules."""
 
-module(name = "sdl2_rules", version = "0.0.1")
+module(name = "rules_sdl2", version = "0.0.1")
 
 bazel_dep(name = "rules_apple", version = "3.0.0-rc2")
 bazel_dep(name = "rules_cc", version = "0.0.8")
