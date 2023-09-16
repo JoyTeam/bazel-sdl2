@@ -5,7 +5,6 @@ cc_library(
 	alwayslink = True,
 	hdrs = glob(["*.h"]),
 	srcs = glob(["*.c"]),
-	includes = ["../../video/khronos"],
 	deps = [
 		"//:SDL2internal",
 		"//src/dynapi:dynapi",
