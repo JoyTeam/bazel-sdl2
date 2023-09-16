@@ -1,3 +1,4 @@
+load("@rules_apple//apple:apple_binary.bzl", "apple_binary")
 load("@rules_cc//cc:defs.bzl", "cc_library", "cc_binary")
 
 alias(
@@ -73,6 +74,7 @@ apple_binary(
 	],
 	platform_type = "macos",
 	visibility = ["//:__subpackages__"],
+	minimum_os_version = "15.0",
 )
 
 genrule(
@@ -133,6 +135,7 @@ cc_library(
 		"//src/video:video",
 		"//src/misc:misc",
 	],
+	linkopts = SDL_LINKOPTS,
 	visibility = ["//visibility:public"],
 )
 
